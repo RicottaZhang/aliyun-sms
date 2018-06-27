@@ -50,7 +50,7 @@ module Aliyun
         params = get_params(user_params)
         coded_params = canonicalized_query_string(params)
         key_secret = configuration.access_key_secret
-        url = 'http://dysmsapi.aliyuncs.com/?' + 'Signature=' + sign(key_secret, coded_params) + '&' + coded_params
+        url = 'https://dysmsapi.aliyuncs.com/?' + 'Signature=' + sign(key_secret, coded_params) + '&' + coded_params
       end
 
       def get_params(user_params)
